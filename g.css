@@ -1,0 +1,887 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+/*  Header  */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: #fff;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+}
+
+.logo-icon {
+    width: 36px;
+    height: 36px;
+    background: linear-gradient(135deg, #00c851, #00b4db);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-icon i { color: black; font-size: 18px; }
+
+.logo-text .green { color: rgb(7, 249, 7); }
+.logo-text .blue { color: #007bff; }
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    color: #000;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s ;
+}
+
+nav ul li a.active{ color: #00c851; font-weight: 600;} 
+nav a:hover { color: #00c851; }
+
+.burger {
+    display: none;
+    font-size: 26px;
+    cursor: pointer;
+    padding: 6px;
+    border-radius: 6px;
+    background: #f3f3f3;
+    border: none;
+}
+
+/*  Hero Section */
+.hero {
+    width: 100%;
+    min-height: 400px;
+    background: linear-gradient(135deg, #00c851, #007bff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #000;
+    padding: 120px 20px 60px; 
+}
+
+.hero-content { max-width: 700px; }
+
+.tagline {
+    background: #f2f2f2;
+    border-radius: 20px;
+    display: inline-block;
+    padding: 5px 15px;
+    margin-bottom: 30px;
+    font-size: 14px;
+    color: #00c851;
+}
+
+.hero h1 { font-size: 2rem; font-weight: 700; }
+.hero .green { color: #00c851; }
+
+.hero p { margin: 15px 0; color: #333; }
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.report-btn {
+    background-color: #00c851;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+.report-btn:hover { background-color: #00b34a; }
+
+.schedule-btn {
+    background-color: #f2f2f2;
+    color: #333;
+    border: none;
+    border-radius: 30px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+.schedule-btn:hover { background-color: #e0e0e0; }
+
+/* Features Section */
+.features { padding: 80px 0; background-color: white; }
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title h2 { font-size: 32px; color: #000; margin-bottom: 15px; }
+.section-title p { color: #666; max-width: 700px; margin: 0 auto; }
+
+.feature-cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.feature-card {
+    flex: 1;
+    min-width: 200px;
+    background: linear-gradient(135deg, #00c851, #007bff);
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
+}
+
+.feature-card:hover { transform: translateY(-10px); }
+
+.feature-card i {
+    font-size: 40px;
+    color: #25fd08;
+    margin-bottom: 20px;
+}
+
+.feature-card h3 { margin-bottom: 15px; color: #fff; }
+.feature-card p { color: #f0e8e8; margin-bottom: 20px; }
+
+/*  Stats Section  */
+.st { padding: 80px 0; background-color: #f5f5f5; }
+.st-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.st-item {
+    flex: 1;
+    min-width: 200px;
+    text-align: center;
+    padding: 30px 20px;
+}
+.st-number { font-size: 42px; font-weight: 700; color: #2ecc71; margin-bottom: 10px; }
+.st-label { color: #666; font-weight: 500; }
+
+/* ===== CTA Section ===== */
+.cta {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #2ecc71, #a1ddd1);
+    color: white;
+    text-align: center;
+}
+
+.cta h2 { font-size: 32px; margin-bottom: 20px; }
+.cta p {
+    max-width: 700px;
+    margin: 0 auto 30px;
+    font-size: 18px;
+    margin-top: 20px; font-size: 14px;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.rprt-btn {
+    background-color: #fff;
+    color: black;
+    border: none;
+    border-radius: 30px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+.rprt-btn:hover { background-color: #00c851; color: #fff; }
+
+.schdl-btn {
+    background-color: #00c851;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+.schdl-btn:hover { background-color: #0f0e0e; }
+
+/*  Schedule Section  */
+#schedule {
+    padding: 80px 0;
+    background-color: #10b981;
+    text-align: center;
+    color: white;
+}
+#schedule h2 { max-width: 700px; font-size: 32px; margin: 0 auto 30px; }
+#schedule p { max-width: 700px; margin: 0 auto 30px; font-size: 18px; }
+#schedulForm { display: flex; justify-content: center; margin-bottom: 32px; }
+#regionSelect {
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight: 500;
+    width: 300px;  
+}
+.schedule-results {
+    margin: 0 auto 32px auto;
+    width: 900px;
+}
+.schedule-item {
+    border-radius: 8px;
+    background: white;
+    padding: 16px 34px;
+    margin-bottom: 12px;
+    box-shadow: 0 3px 6px rgb(0 0 0 / 0.15);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.schedule-item .content { font-weight: 600; font-size: 14px; color: #222; }
+.schedule-item .content strong { font-weight: 700; }
+.schedule-item button {
+    padding: 6px 14px;
+    border-radius: 20px;
+    border: none;
+    background-color: #e3e3e3;
+    font-weight: 700;
+    font-size: 12px;
+    color: #444;
+    cursor: default;
+}
+/* Info Box */
+.Info-box h3 {
+  font-size: 16px;
+  margin-bottom: 16px;
+  text-align: center;
+}
+.info-box {
+  margin: 30px auto 64px auto;
+  width: 900px;
+  background: #d5d5d5;
+  border-radius: 10px;
+  padding: 30px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #222222;
+  user-select: none;
+ text-align: justify;
+}
+.info-box ul {
+  padding-left: 20px;
+  
+  
+}
+
+/*  Report Section  */
+#report { padding: 80px 0; background-color: #d1cdcd; text-align: center; }
+#report h2 { font-weight: 700; font-size: 20px; margin-bottom: 4px; }
+#report p { font-weight: 600; font-size: 14px; margin-bottom: 32px; }
+#reportForm {
+    width: 700px;
+    margin: 0 auto 32px auto;
+    background-color: #fff;
+    height: 650px;
+    border-radius: 20px;
+    padding-bottom: 5%;
+}
+#reportForm fieldset { border: none; }
+#reportForm label { display: block; font-weight: 700; font-size: 14px; margin-top: 16px; margin-bottom: 6px; }
+#reportForm select,
+#reportForm input,
+#reportForm textarea {
+    width: 80%;
+    padding: 8px 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-weight: 400;
+    font-size: 14px;
+}
+#reportForm textarea { resize: vertical; min-height: 84px; }
+.form-buttons { margin-top: 32px; display: flex; justify-content: space-evenly; }
+.btn-cancel {
+    width: 28%;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    background: #c7bdb2;
+    font-size: 15px;
+    cursor: pointer;
+}
+.btn-cancel:hover, .btn-cancel:focus { background-color: #7b6d57; outline: none; }
+#reportForm button.btn-primary {
+    width: 32%;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    background: #30d66a;
+    font-size: 15px;
+    color: white;
+    cursor: pointer;
+}
+#reportForm button.btn-primary:hover,
+#reportForm button.btn-primary:focus { background-color: #056b39; outline: none; }
+/* What Happens Next */
+.what-next {
+  width: 800px;
+  margin-left: 350px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #222;
+  background-color:#fff ;
+  border-radius: 10px;
+}
+
+.what-next h3 {
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.what-next ol {
+  padding-left: 70px;
+  line-height: 160%;
+  height: 130px;
+}
+
+.what-next li {
+  margin-bottom: 8px;
+  text-align: justify;
+}
+/*  Recycle Section  */
+.hro {
+text-align: center;
+padding: 90px 30px;
+background: linear-gradient(to right, #00b37a, #007bff);
+color: white;
+
+}
+
+
+.hro h1 {
+font-size: 32px;
+font-weight: bold;
+} 
+
+
+.top-bar {
+justify-content: space-between;
+padding: 30px 40px;
+}
+
+
+.top-bar h3 {
+font-size: 20px;
+}
+
+
+.filter select {
+padding: 12px;
+border-radius: 10px;
+border: none;
+background: #e5e5e5;
+font-size: 16px;
+width: 180px;
+}
+
+
+.crds-container {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 20px;
+padding: 20px 40px;
+}
+
+
+.crd {
+background: #e5e5e5;
+padding: 20px;
+border-radius: 12px;
+box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+
+.location {
+font-size: 14px;
+margin: 5px 0;
+}
+
+
+.materials-title {
+margin: 10px 0;
+font-weight: bold;
+}
+
+
+.badge {
+background: #008037;
+color: white;
+padding: 5px 12px;
+border-radius: 20px;
+font-size: 12px;
+float: right;
+}
+
+
+.material-tag {
+background: #0a66c2;
+color: white;
+padding: 6px 10px;
+border-radius: 20px;
+margin-right: 6px;
+font-size: 12px;
+display: inline-block;
+margin-bottom: 6px;
+}
+
+
+.info-row {
+margin: 10px 0;
+font-size: 14px;
+}
+
+
+/*  Why Recycle */
+.why-recycle {
+background: #efefef;
+padding: 50px;
+text-align: center;
+}
+
+
+.stts {
+display: flex;
+justify-content: center;
+gap: 70px;
+margin-top: 20px;
+}
+
+
+.stts h3 {
+color: #00b37a;
+font-size: 30px;
+}
+/*  Admin Section  */
+
+
+#admin {
+  background: #f5f5f5;
+  padding: 20px;
+  color: #333;
+}
+
+/* ===== Headings ===== */
+#admin h1 {
+  color: #2ec866;
+  margin-top: 50px;
+  text-align: center;
+}
+
+#admin h2 {
+  color: #3d5847;
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+  
+}
+#reportNotification {
+  display:none; 
+  background:#7aadf9; 
+  padding:10px; 
+  margin-bottom:15px;
+   border-radius:6px;
+}
+
+#scheduleForm {
+  margin-bottom: 30px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(17, 137, 125, 0.18);
+}
+
+#scheduleForm label {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+#scheduleForm input[type="text"],
+#scheduleForm select {
+  width: 100%;
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1.5px solid #ccc;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+#scheduleForm button {
+  margin-top: 15px;
+  padding: 10px 30px;
+  border-radius: 10px;
+  border: none;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  
+}
+
+#saveBtn {
+  background: #2ec866;
+  color: white;
+  margin-top: auto;
+}
+
+#saveBtn:hover {
+  background: #27994c;
+}
+
+#cancelEditBtn {
+  background: #b3a88f;
+  color: white;
+  margin-left: 10px;
+}
+
+#cancelEditBtn:hover {
+  background: #998a76;
+}
+
+.section {
+  margin-bottom: 30px;
+}
+
+
+/* Footer Section */
+.footer {
+    background: #ffffff;
+    padding: 40px 60px;
+    border-top: 1px solid #dcdcdc;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 30px;
+}
+
+.footer-section h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.footer-section p,
+.footer-section a {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 6px;
+}
+
+.footer-section a {
+    text-decoration: none;
+    display: block;
+}
+
+.footer-section a:hover {
+    text-decoration: underline;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-icon {
+    font-size: 28px;
+}
+.footer-bottom {
+    text-align: center;
+    padding-top: 10px;
+    font-size: 13px;
+    color: #666;
+    border-top: 1px solid #e0e0e0;
+}
+
+   /*Responsiveness */
+   /*1. Tablets & Medium Screens
+------------------------------ */
+@media (max-width: 992px) {
+
+  header {
+    padding: 15px 20px;
+  }
+
+  nav ul {
+    gap: 15px;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .feature-cards {
+    gap: 20px;
+  }
+
+  .crds-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .stats-container,
+  .admin-summary {
+    gap: 20px;
+  }
+
+  .schedule-results,
+  .info-box,
+  #reportForm,
+  .what-next {
+    width: 90%;
+  }
+
+  .admin-tabs {
+    flex-wrap: wrap;
+  }
+}
+
+
+
+  /* 2. Mobile Phones
+------------------------------ */
+@media (max-width: 768px) {
+
+  /* Header */
+  nav ul {
+     display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    background: white;
+    text-align: center;
+    padding: 20px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  nav ul.active {
+    display: flex;
+  }
+
+  .burger {
+    display: block;
+  }
+
+  /* When burger opens menu */
+@media (max-width: 768px) {
+  .burger {
+    display: block;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    /* right: 10px; */
+    background: #fff;
+    width: 200px;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+    gap: 15px;
+    z-index: 99;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+  nav ul li {
+    padding: 10px 0;
+  }
+}
+
+
+  /* Hero */
+  .hero {
+    padding: 140px 20px 60px;
+  }
+
+  .hero h1 {
+    font-size: 1.6rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-buttons button {
+    width: 100%;
+  }
+
+  /* Features */
+  .feature-cards {
+    flex-direction: column;
+  }
+
+  /* St*/
+  .stats-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  /* Ct */
+  .cta-buttons {
+    flex-direction: column;
+  }
+
+  .cta-buttons button {
+    width: 100%;
+  }
+
+  /* Schedule page */
+  #schedule {
+    padding: 40px 20px;
+  }
+
+  #scheduleForm {
+    flex-direction: column;
+  }
+
+  #regionSelect {
+    width: 100%;
+  }
+
+  .schedule-results {
+    width: 100%;
+  }
+
+  /* Report page */
+  #reportForm {
+    width: 95%;
+    padding-bottom: 20px;
+  }
+
+  .form-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .form-buttons button {
+    width: 80%;
+  }
+
+  .what-next {
+    width: 95%;
+    margin: 30px auto;
+    padding: 30px;
+    height:300px;
+  }
+
+  .what-next ol {
+    padding-left: 20px;
+  }
+
+  /* Recycle grid */
+  .crds-container {
+    grid-template-columns: 1fr;
+  }
+
+  .top-bar {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  /* Admin */
+  .admin-summary {
+    flex-direction: column;
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .admin-tabs {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .admin-tabs .tab {
+    width: 47%;
+    text-align: center;
+  }
+
+  /* Footer */
+  .footer-content {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+}
+
+
+  /* 3. Extra Small Phones
+------------------------------ */
+@media (max-width: 480px) {
+
+  .hero h1 {
+    font-size: 1.4rem;
+  }
+
+  .tagline {
+    font-size: 12px;
+  }
+
+  .feature-card {
+    padding: 20px;
+  }
+
+  .stats-container {
+    gap: 15px;
+  }
+
+  .cta h2 {
+    font-size: 26px;
+  }
+
+  .crds-container {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-tabs .tab {
+    width: 100%;
+  }
+}

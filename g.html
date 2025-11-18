@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Green Watch — Single Page</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="g.css" />
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">
+      <div class="logo-icon"><i class="fa-solid fa-leaf"></i></div>
+      <span class="logo-text">
+        <span class="green">Green</span>
+        <span class="blue">Watch</span>
+      </span>
+    </div>
+
+    <nav id="navMenu">
+      <ul>
+        <li><a href="#" class="nav-link" data-target="home"><i class="fa-solid fa-house"></i> Home</a></li>
+        <li><a href="#" class="nav-link" data-target="report"><i class="fa-solid fa-flag"></i> Report</a></li>
+        <li><a href="#" class="nav-link" data-target="recycle"><i class="fa-solid fa-recycle"></i> Recycle</a></li>
+        <li><a href="#" class="nav-link" data-target="schedule"><i class="fa-solid fa-calendar"></i> Schedule</a></li>
+        <li><a href="#" class="nav-link" data-target="admin"><i class="fa-solid fa-user-shield"></i> Admin Dashboard</a></li>
+      </ul>
+    </nav>
+
+    <button class="burger" id="burgerBtn">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+  </header>
+
+
+  <!-- HOME PAGE -->
+  <section id="home" class="page ">
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-content">
+        <div class="tagline"><i class="fa-solid fa-leaf"></i> Smart Waste Management</div>
+        <h1>Making Kigali <span class="green">Cleaner & Greener</span></h1>
+        <p> Report full waste bins, check collection schedules, and find recycling centers.
+      Join us in creating a cleaner, more sustainable city.</p>
+
+        <div class="hero-buttons">
+          <button class="report-btn">📍 Report a Waste Bin</button>
+          <button class="schedule-btn">📅 View Schedule</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features">
+      <div class="container">
+        <div class="section-title">
+          <h2>How Green Watch Works</h2>
+          <p>Simple tools to help you keep Kigali clean.</p>
+        </div>
+
+        <div class="feature-cards">
+          <div class="feature-card">
+            <i class="fas fa-calendar-alt"></i>
+            <h3>Check Collection Schedule</h3>
+            <p>View waste collection schedules for your district and never miss a pickup day.</p>
+          </div>
+
+          <div class="feature-card">
+            <i class="fas fa-exclamation-circle"></i>
+            <h3>Report Full Bins</h3>
+            <p>Quickly report overflowing waste bins with location and photos for faster response.</p>
+          </div>
+
+          <div class="feature-card">
+            <i class="fas fa-recycle"></i>
+            <h3>Find Recycling Centers</h3>
+            <p>Locate nearby recycling  centers and learn what materials they accept.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- st -->
+    <section class="st">
+      <div class="container">
+        <div class="st-container">
+          <div class="st-item"><div class="st-number">1,250+</div><div class="st-label">Reports Filed</div></div>
+          <div class="st-item"><div class="st-number">24h</div><div class="st-label">Avg Response Time</div></div>
+          <div class="st-item"><div class="st-number">10+</div><div class="st-label">Districts Covered</div></div>
+          <div class="st-item"><div class="st-number">78%</div><div class="st-label">Resolution Rate</div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- cta -->
+    <section class="cta">
+      <div class="container">
+        <h2>Ready to Make a Difference?</h2>
+        <p>Join thousands of citizens helping to keep Kigali clean and sustainable.</p>
+
+        <div class="cta-buttons">
+          <button class="rprt-btn">Start Reporting Now</button>
+          <button class="schdl-btn">View Schedule</button>
+        </div>
+          <p>You can be more than 10% efficient in waste management</p>
+      </div>
+    </section>
+
+  </section>
+
+  <!-- SCHEDULE PAGE -->
+  <section id="schedule" class="page">
+    <h2>Collection Schedule</h2>
+    <p>Select your district to view the pickup schedule.</p>
+
+    <form id="schedulForm">
+      <select id="regionSelect">
+        <option value="Gasabo">Gasabo</option>
+        <option value="Kicukiro">Kicukiro</option>
+        <option value="Nyarugenge">Nyarugenge</option>
+      </select>
+    </form>
+
+    <div id="scheduleResults" class="schedule-results"></div>
+    <div class="info-box">
+        <h3>Important information</h3>
+        <ul>
+          <li>Place your waste bins outside at least 30 minutes before scheduled time.</li>
+          <li>Separate recyclables from general waste as designated days.</li>
+          <li>Ensure bins are not blocking walkways or roads.</li>
+          <li>Report missed collections within 24 hours for priority rescheduling.</li>
+        </ul>
+      </div>
+      </section>
+
+
+
+  <!-- REPORT PAGE -->
+  <section id="report" class="page">
+    <h2>Report a Full Bin</h2>
+    <form id="reportForm">
+      <fieldset>
+        <legend>Issue Details</legend>
+
+        <label>District</label>
+        <select id="district" required>
+          <option value="">Select district</option>
+          <option>Gasabo</option><option>Kicukiro</option><option>Nyarugenge</option>
+        </select>
+
+        <label>Location</label>
+        <input type="text" id="location" placeholder="e.g., KN 54 St" required />
+
+        <label>Issue Type</label>
+        <select id="issueType" required>
+          <option value="">Select issue type</option>
+          <option>General Waste</option>
+          <option>Recyclables</option>
+          <option>Organic Waste</option>
+        </select>
+
+        <label>Description</label>
+        <textarea id="description" rows="4" required></textarea>
+
+        <label>Contact Number</label>
+        <input type="tel" id="contactNumber" placeholder="+250 XXX XXX XXX" required />
+      </fieldset>
+
+      <div class="form-buttons">
+        <button type="button" id="cancelReport" class="btn-cancel">Cancel</button>
+        <button type="submit" class="btn-primary">Submit Report</button>
+      </div>
+    </form>
+    <div class="what-next">
+        <h3>What Happens Next?</h3>
+       <ol>
+          <li>Your report is immediately sent to the waste management team</li>
+          <li>The team reviews and prioritizes based on urgency</li>
+          <li>You will receive  SMS confirmation with tracking number</li>
+          <li>Average response time is 24-48 hours for standard issues</li>
+       </ol>
+      </div>
+  </section>
+
+
+
+  <!-- RECYCLE PAGE -->
+  <section id="recycle" class="page">
+    <section class="hro">
+      <h1>Nearby Recycling Points</h1>
+      <p>Find locations to recycle waste in Rwanda.</p>
+    </section>
+
+    <section class="top-bar">
+      <h3><span>📍</span> 6 recycling points found</h3>
+
+      <div class="filter">
+        <label>Filter by district:</label>
+        <select id="districtFilter">
+          <option value="all">All Districts</option>
+          <option value="Gasabo">Gasabo</option>
+          <option value="Kicukiro">Kicukiro</option>
+          <option value="Nyarugenge">Nyarugenge</option>
+        </select>
+      </div>
+    </section>
+
+    <div class="crds-container" id="centersContainer"></div>
+
+    <section class="why-recycle">
+      <h2>Why Recycle?</h2>
+      <p>Recycling reduces waste, protects the environment and saves energy.</p>
+
+      <div class="stts">
+        <div><h3>80%</h3><p>Less Landfill Waste</p></div>
+        <div><h3>60%</h3><p>Energy Savings</p></div>
+        <div><h3>95%</h3><p>Material Recovery</p></div>
+      </div>
+    </section>
+  </section>
+
+<!--Admin darshboard-->
+<div class="page" id="admin">
+  <h1>Admin Dashboard</h1>
+
+  <div id="reportNotification" > <p>view reports</p></div>
+
+  <section class="section">
+    <h2>Manage Schedules</h2>
+    <form id="scheduleForm">
+      <input type="hidden" id="scheduleId">
+      <label>District</label>
+      <select id="district" required>
+        <option value="">Select District</option>
+        <option value="Gasabo">Gasabo</option>
+        <option value="Kicukiro">Kicukiro</option>
+        <option value="Nyarugenge">Nyarugenge</option>
+      </select>
+      <label>Day</label>
+      <input type="text" id="day" placeholder="Monday" required>
+      <label>Time</label>
+      <input type="text" id="time" placeholder="8:00 AM" required>
+      <label>Areas</label>
+      <input type="text" id="areas" placeholder="Kimironko, Remera" required>
+      <label>Type</label>
+      <select id="wasteType" required>
+        <option value="">Select Type</option>
+        <option value="General waste Waste">General Waste</option>
+        <option value="Recyclable">Recyclable</option>
+        <option value="Organic Waste">Organic Waste</option>
+      </select>
+      <button type="submit" id="saveBtn">Add Schedule</button>
+      <button type="button" id="cancelEditBtn">Cancel</button>
+    </form>
+  </section>
+</div>
+
+
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-content">
+
+      <div class="footer-section brand">
+        <div class="footer-logo">
+          <span class="footer-icon">🌿</span>
+          <h3>Green Watch</h3>
+        </div>
+        <p>Keeping Kigali clean and sustainable.</p>
+      </div>
+
+      <div class="footer-section links">
+        <h3>Quick Links</h3>
+        <a href="#">Home</a>
+        <a href="#">Schedule</a>
+        <a href="#">Report Issue</a>
+        <a href="#">Recycling Centers</a>
+      </div>
+
+      <div class="footer-section contact">
+        <h3>Contact</h3>
+        <p>Email: greenwatch@rw</p>
+        <p>Phone: +250 XXX XXX XXX</p>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">© 2025 Green Watch. All rights reserved.</div>
+  </footer>
+
+
+  <script src="g.js"></script>
+
+</body>
+</html>
